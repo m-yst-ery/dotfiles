@@ -1,0 +1,42 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = '''
+$git_state$git_branch$git_status$fill
+$directory$fill$dotnet$nodejs$rust
+$shell$cmd_duration[󰄾](bold green) '''
+
+[cmd_duration]
+format = "[$duration]($style) "
+min_time = 2000
+
+[directory]
+truncate_to_repo = true
+format = '[$read_only]($read_only_style)[$path]($style)'
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+[dotnet]
+version_format = "v${major}.${minor}.${patch}"
+detect_files = [
+    "Directory.Build.props",
+    "Directory.Build.targets",
+    "Packages.props",
+]
+detect_extensions = ["csproj", "fsproj", "xproj", "sln", "slnx"]
+
+[git_status]
+conflicted = "󱐌"
+untracked = "󰘓"
+stashed = ""
+deleted = "󰆴"
+
+[fill]
+symbol = " "
+
+[shell]
+disabled = false
+style = 'dimmed white'
+format = '[\[$indicator\]]($style) '

@@ -1,0 +1,53 @@
+// -*- mode: jsonc -*-
+{
+    "position": "top", 
+    "height": 30,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 5,
+    "modules-left": [
+        "clock"
+    ],
+    "modules-center": [
+	"hyprland/workspaces"
+    ],
+    "modules-right": [
+	"network",
+        "cpu",
+        "memory"
+    ],
+    "hyprland/workspaces": {
+	"format": "{name}"
+    },
+    "clock": {
+	"interval": "30",
+	"format": "{:%a %d.%m. %H:%m}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+	"calendar": {
+            "mode": "month",
+            "mode-mon-col": 4,
+            "weeks-pos": "right",
+            "on-scroll": 1
+	},
+        "actions":  {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "network": {
+	"interval": 10,
+	"format": "󰕒 {bandwidthUpBits} 󰇚 {bandwidthDownBits}",
+	"format_disconnected": "󰈂",
+	"tooltip": false
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {percentage}%",
+	"tooltip": false
+    }
+}
