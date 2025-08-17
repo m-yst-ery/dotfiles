@@ -21,8 +21,8 @@
 	"format": "{name}"
     },
     "clock": {
-	"interval": "30",
-	"format": "{:%a %d.%m. %H:%m}",
+	"interval": "60",
+	"format": "{:%a %d.%m. %H:%M}",
         "tooltip-format": "<tt>{calendar}</tt>",
 	"calendar": {
             "mode": "month",
