@@ -14,6 +14,7 @@ min_time = 2000
 [directory]
 truncate_to_repo = true
 format = '[$read_only]($read_only_style)[$path]($style)'
+read_only = ' '
 
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "
